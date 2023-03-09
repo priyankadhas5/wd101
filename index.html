@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" />
+    </head>
+    <body>
+        <form onsubmit="addToLocalStorage(event)" method="post" action=".">
+            <h1>Registration Form</h1>
+            <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Enter full name" required>
+            </label>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Enter email" required>
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="Enter password" minlength="6" required>
+            </label>
+            <label>
+                <span>Date of birth</span>
+                <input type="date" name="dob" required>
+            </label>
+            <label>
+                <input type="checkbox" name="terms" required>
+                <span class="font-light">Accept Terms & Conditions</span>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        <div>
+            <h2>Entries</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>DOB</th>
+                    <th>accepted terms?</th>
+                </tr>
+                </thead>
+                <tbody id="loadData">
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
